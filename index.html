@@ -6,19 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-
-    <button>Press me</button>
-    <div id="greeting"></div>
-
     <script>
 
-const button = document.querySelector("button");
+let hour = 12;
 
-function greet() {
-  const name = prompt("What is your name?");
-  const greeting = document.querySelector("#greeting");
-  greeting.textContent = `Hello ${name}, nice to see you!`;
+if (hour < 10 || hour > 18) {
+  alert( 'The office is closed.' );
 }
+
+if (hour > 10 || hour < 18) {
+    alert('Welcome to the office');
+}
+
 </script>
     
 </body>
