@@ -9,8 +9,9 @@
     <script>
 
 let hour = 12;
+let isWeekend = true;
 
-if (hour < 10 || hour > 18) {
+if (hour < 10 || hour > 18 || isWeekend) {
   alert( 'The office is closed.' );
 }
 
