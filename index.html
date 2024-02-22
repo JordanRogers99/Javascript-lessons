@@ -6,33 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+
+    <button>Press me</button>
+    <div id="greeting"></div>
+
     <script>
 
-        const MAX = 57;
-        let actual = MAX - 13;
-        let percentage = actual / MAX;
-        console.log(percentage)
+const button = document.querySelector("button");
 
-        console.log('MAX' == 'actual');
-
-
-        const string = "The revolution will not be televised.";
-        console.log(string);
-
-        const name = "Chris";
-        const greeting = `Hello, ${name}`;
-        console.log(greeting); 
-    </script>
-
-<h1>JavaScript Strings</h1>
-<h2>The length Property</h2>
-
-<p>The length of the string is:</p>
-<p id="demo"></p>
-
-<script>
-let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-document.getElementById("demo").innerHTML = text.length;
+function greet() {
+  const name = prompt("What is your name?");
+  const greeting = document.querySelector("#greeting");
+  greeting.textContent = `Hello ${name}, nice to see you!`;
+}
 </script>
     
 </body>
