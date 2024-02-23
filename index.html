@@ -8,16 +8,17 @@
 <body>
     <script>
 
-let password = prompt('What is your password?')
+let answer = parseInt(prompt('Please enter your number.'));
 
-actualpassword = ('MyPassword123');
-
-if (password == actualpassword) {
-    alert ('Correct!')
-} else {
-    alert ('Incorrect.')
+for (let i = 1; i <= answer; i++) {
+    if (i % 3 === 0) {
+        console.log("fizz");
+    } else if (i % 5 === 0) {
+        console.log('buzz');
+    } else {
+        console.log(i);
+    }
 }
-
 
 
 
