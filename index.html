@@ -8,20 +8,18 @@
 <body>
     <script>
 
-let answer = parseInt(prompt('Please enter your number.'));
+  const CompChoice = Math.floor(Math.random() * 3);
+  if (CompChoice = 1) {
+    return ("rock");
+  } else if (CompChoice = 2) {
+    return "paper"
+  } else if (CompChoice = 3) {
+    return "scissors"
+  } else {
+    return ("You need to choose rock, paper or scissors.")
+  }
 
-for (let i = 1; i <= answer; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log('FizzBuzz');
-    } else if (i % 3 === 0) {
-        console.log("fizz");
-    } else if (i % 5 === 0) {
-        console.log('buzz');
-    } else {
-        console.log(i);
-    }
-}
-
+  console.log(CompChoice);
 
 
 </script>
