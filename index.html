@@ -12,11 +12,9 @@ let playRoundResult;
 let playerScore = 0;
 let computerScore = 0; /// This code sets the initial values ///
 
-const playGame = () => { ///Look into what the symbols at the end are ///
-  for (let i = 0; i < 5; i++) { ///This is a loop, look into loops bc this is
-    //why it is working so well in this case.///
-    let choice = Math.floor(Math.random() * 3) + 1; ///This chooses the random number
-    ///BUT look into each line of code and what it means///
+const playGame = () => { //set const and declare function with symbols
+  for (let i = 0; i < 5; i++) { //loop that 
+    let choice = Math.floor(Math.random() * 3) + 1; 
 
     function getComputerChoice() {
       if (choice === 1) return 'ROCK';
