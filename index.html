@@ -10,16 +10,18 @@
 
 let playRoundResult;
 let playerScore = 0;
-let computerScore = 0;
+let computerScore = 0; /// This code sets the initial values ///
 
-const playGame = () => {
-  for (let i = 0; i < 5; i++) {
-    let choice = Math.floor(Math.random() * 3) + 1;
+const playGame = () => { ///Look into what the symbols at the end are ///
+  for (let i = 0; i < 5; i++) { ///This is a loop, look into loops bc this is
+    //why it is working so well in this case.///
+    let choice = Math.floor(Math.random() * 3) + 1; ///This chooses the random number
+    ///BUT look into each line of code and what it means///
 
     function getComputerChoice() {
       if (choice === 1) return 'ROCK';
       if (choice === 2) return 'PAPER';
-      return 'SCISSOR';
+      return 'SCISSOR'; ///This basically makes sense, but why no choice option for 3?///
     }
 
     function playRound(playerSelection, computerSelection) {
@@ -30,14 +32,16 @@ const playGame = () => {
       if (computerSelection === playerSelection) return 'Tie!';
       if (win) {
         playerScore++;
-        return 'You win!';
+        return 'You win!'; ///This all appears to make sense. It sets the parameters
+        //for a Win and tie but I need to find out why the loss doesn't need to be 
+        //added here? Seems doable.///
       }
       computerScore++;
       return 'You lose!';
     }
 
     let player = prompt('pick', '');
-    const playerSelection = player.toUpperCase();
+    const playerSelection = player.toUpperCase(); ///uppercase?????///
     const computerSelection = getComputerChoice();
     playRoundResult = playRound(playerSelection, computerSelection);
     console.log(playRound(playerSelection, computerSelection));
@@ -51,6 +55,14 @@ playGame();
 
 console.log(`Computer: ${computerScore}`);
 console.log(`Player: ${playerScore}`);
+
+
+
+///Basically, I need to deep dive into all of the notes and the final parts
+//of code too. Tomorrow, I will do this and then lay out the order that
+//they used here, alongside notes on each step that covers rough code and
+//ideas that allow me to write it myself. I don't want to edit their code,
+//I want to start from scratch and use the notes I take.///
 
     
 </script>
