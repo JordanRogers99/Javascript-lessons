@@ -8,30 +8,36 @@
 <body>
     <script>
 
-var things = ['Rock.', 'Paper.', 'Scissors.'];
-var rounds = 5;
+var things = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var rounds = 10;
 var playerScore = 0;
 var computerScore = 0;
 
-function playthegame (playerOption, computerOption) {
-        if  ((playerOption === 'rock' && computerOption === 'Scissors.') ||
-            (playerOption === 'paper' && computerOption === 'Rock.') ||
-            (playerOption === 'scissors' && computerOption === 'Paper/')){
-            console.log('You win! The computer chose: ' + computerOption);
-            playerScore++;
-        } else if ( (playerOption === 'rock' && computerOption === 'Paper.') ||
-                    (playerOption === 'paper' && computerOption === 'Scissors.') ||
-                    (playerOption === 'scissors' && computerOption === 'Rock.') ) {
+
+///The above sets values for the scores and amount of rounds
+
+function playthegame (playerOption, computerOption) { 
+///this function is followed by the game rules
+        if  (playerOption === computerOption) {
+            playerScore++; 
+///If the player wins, their score goes up by 1.
+        } else if ( (playerOption !== 'seven' && computerOption === 'Seven.') ||
+                    (playerOption !== 'four' && computerOption === 'Four.') ||
+                    (playerOption !== 'three' && computerOption === 'Rock.') ) {
                     console.log('You lose. The computer chose: ' +computerOption); 
                     computerScore++;
+
+///Similarly, if the player loses, their opponents score goes up.
          } else {
             console.log('It\'s a tie! The computer also went with: ' +computerOption)
          }
     }
 
-for (let round = 1; round <= rounds; round ++) {
+for (let round = 1; round <= rounds; round ++) { 
+///This code is the loop and it ensures that the code will stop looping when 'round' is less than or equal to 'rounds', and goes up by 1 each time.
     alert( 'Round ' + round + ': The computer has made its choice. What do you choose?');
     let playerOption = prompt('Round ' + round + ': Do you choose rock, paper, or scissors?').toLowerCase();
+///.tolowercase means that the player can type things without it being case sensitive.
     let computerOption = things [Math.floor(Math.random() * things.length)];
 
     playthegame(playerOption, computerOption);
