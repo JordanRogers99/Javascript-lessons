@@ -21,49 +21,45 @@ let S = 'Scissors';
 function playthegame () {
 
     let result;
+    let points = 0;
 
 if (MyOption === P && thing === ' Rock.') {
     console.log('Nice choice. The computer chose:' + thing, 'You win. Paper beats rock.')
     result = true;
+    console.log (points + 1)
     
     } else if (MyOption === S && thing === ' Rock.'){
         console.log('Rock beats scissors. The computer chose:' + thing, 'You lose.');
         result = false;
+        console.log('points: ' + points)
         
     } else if (MyOption === R && thing === ' Paper.') {
         console.log('You lose. The computer chose:' + thing, 'Paper beats rock.');
         result = false;
+        console.log('points: ' + points)
         
     } else if (MyOption === S && thing === ' Paper.') {
         console.log('You win! The computer chose:' + thing, 'Scissors beats paper.');
         result = true;
+        console.log('points: ' + points + 1)
         
     } else if (MyOption === R && thing === ' Scissors.') {
         console.log('You win! The computer chose:' + thing, 'Rock will mess scissors up in the street.');
         result = true;
+        console.log('points: ' + points + 1)
         
     } else if (MyOption === P && thing === ' Scissors.') {
         console.log('You lose. The computer chose:' + thing, 'Scissors beats paper.');
         result = false;
+        console.log('points: ' + points)
         
     } else {
         console.log('It is a tie.');
+        console.log('points: ' + points)
     }
 }
 
 playthegame();
-
-
-function keepScore () {
-
-    let points = 0;
-
-    if (result = true) {
-        console.log(points + 1);
-    } else {
-        console.log(points)
-    }
-}
 
     
 </script>
