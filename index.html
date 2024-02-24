@@ -7,43 +7,9 @@
 </head>
 <body>
     <script>
-
-        console.log('Choose a number between 1 and 3, if you guess the same number as the computer, you win. Whoever gets more than 5, wins.')
-
-var things = [1, 2, 3];
-var rounds = 5;
-var playerScore = 0;
-var computerScore = 0;
-
-function playthegame (playerOption, computerOption) { 
-
-        if  (playerOption === computerOption) {
-            alert('Correct. The computer also chose: ' + computerOption)
-            playerScore++; 
-         } else {
-            alert('You lost. The computer chose: ' +computerOption)
-            computerScore++;
-         }
-    }
-
-for (let round = 1; round <= rounds; round ++) { 
-    alert( 'Round ' + round + ': The computer has made its choice. What do you choose?');
-    let playerOption = parseInt(prompt('Round ' + round + ': Choose a number between 1 and 3'));
-    let computerOption = things [Math.floor(Math.random() * things.length)];
-
-    playthegame(playerOption, computerOption);
-}
-
-console.log('FINAL SCORE: ')
-console.log('Your score: ' + playerScore)
-console.log('Computer score: ' + computerScore)
-
-if (playerScore > computerScore) {
-    console.log ('You win!')
-} else if (playerScore === computerScore){
-    console.log('It\'s a tie! You were so close.')
-} else {
-    console.log('You lost. Refresh to try again.')
+let colours = ['Red', 'Orange', 'Yellow', 'Green', 'Blue'];
+for (const colour of colours) {
+    console.log(colour);
 }
 
 
