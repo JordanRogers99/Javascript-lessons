@@ -8,21 +8,32 @@
 <body>
     <script>
 
-var things = [' Rock', ' Paper', ' Scissors'];
+var things = [' Rock.', ' Paper.', ' Scissors.'];
 var thing = things[Math.floor(Math.random()*things.length)];
-alert('The computer chose:' + thing);
+alert('The computer has made its choice. Click to make yours.');
 
 let MyOption = prompt('Do you choose rock, paper or scissors?')
+let R = 'Rock';
+let P = 'Paper';
+let S = 'Scissors';
 
-function game () {
-    if (MyOption = ('Paper') && thing === ' Rock') {
-        alert('You lose! Rock beats Paper.');
+function thegame (){
+if (MyOption === P && thing === ' Rock.') {
+    console.log('Nice choice. The computer chose:' + thing, 'You win. Paper beats rock.')
+    } else if (MyOption === S && thing === ' Rock.'){
+        console.log('Rock beats scissors. The computer chose:' + thing, 'You lose.');
+    } else if (MyOption === R && thing === ' Paper.') {
+        console.log('You lose. The computer chose:' + thing, 'Paper beats rock.');
+    } else if (MyOption === S && thing === ' Paper.') {
+        console.log('You win! The computer chose:' + thing, 'Scissors beats paper.');
+    } else if (MyOption === R && thing === ' Scissors.') {
+        console.log('You win! The computer chose:' + thing, 'Rock will mess scissors up in the street.');
+    } else if (MyOption === P && thing === ' Scissors.') {
+        console.log('You lose. The computer chose:' + thing, 'Scissors beats paper.');
     } else {
-        console.log('Did not work');
+        console.log('It is a tie.');
     }
 }
-
-
 </script>
     
 </body>
