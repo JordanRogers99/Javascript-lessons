@@ -8,18 +8,19 @@
 <body>
     <script>
 
-  const CompChoice = Math.floor(Math.random() * 3);
-  if (CompChoice = 1) {
-    return ("rock");
-  } else if (CompChoice = 2) {
-    return "paper"
-  } else if (CompChoice = 3) {
-    return "scissors"
-  } else {
-    return ("You need to choose rock, paper or scissors.")
-  }
+var things = [' Rock', ' Paper', ' Scissors'];
+var thing = things[Math.floor(Math.random()*things.length)];
+alert('The computer chose:' + thing);
 
-  console.log(CompChoice);
+let MyOption = prompt('Do you choose rock, paper or scissors?')
+
+function game () {
+    if (MyOption = ('Paper') && thing === ' Rock') {
+        alert('You lose! Rock beats Paper.');
+    } else {
+        console.log('Did not work');
+    }
+}
 
 
 </script>
